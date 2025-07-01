@@ -22,6 +22,7 @@ let date;
 let dayOrNight;
 function updateDate() {
     date = new Date();
+
     currentDate.innerHTML = date;
     if (date.getHours() >= 19 || date.getHours() <= 6) {
         dayOrNight = "night";
@@ -57,13 +58,12 @@ function sort() {
     const entries = Object.entries(data);
 
     entries.sort((a, b) => { return Number(a[1].date) - Number(b[1].date) });
-    let currentDateText = Number(String(date.getMonth() + 1) + String(date.getDate()))
+    const currentDay = String(date.getDate()).length <= 1 ? "0" + String(date.getDate()) : String(date.getDate());
+    console.log(currentDay)
+    const currentDateText = Number(String(date.getMonth() + 1) + currentDay);
+
     const pastBirthdays = [];
     birthdayList = [];
-
-    if(String(currentDateText).length == 2) {
-        currentDateText = Number(String(currentDateText)[0] + "0" + String(currentDateText)[1]);
-    }
 
     for (let i = 0; i < entries.length; i++) {
         if (Number(entries[i][1].date) < currentDateText) {
