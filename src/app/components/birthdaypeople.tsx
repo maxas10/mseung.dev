@@ -1,7 +1,6 @@
 "use client";
 import * as birthdays from '../birthdays/birthdays.json'
-import { useState, useEffect } from "react";
-import { Opacity } from '@tsparticles/engine';
+import { useState, useEffect, useCallback } from "react";
 
 interface BirthdayPeopleProps {
   onBirthdayDetected: (birthdayExists: boolean) => void;
@@ -37,7 +36,7 @@ export default function BirthdayPeople({ onBirthdayDetected }: BirthdayPeoplePro
 
 
 
-    function handleSortInitial(values: Array<SortedPerson>) {
+    const handleSortInitial = (values: Array<SortedPerson>) => {
         return values.sort(
             function (a: SortedPerson, b: SortedPerson) {
                 const adate: number = Number(a.data.date)

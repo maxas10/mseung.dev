@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Title from "./components/title";
+import Link from "next/link";
 export default function Home() {
   const iconWidth:number = 30
   return (
@@ -26,10 +27,10 @@ export default function Home() {
       <p>Check out some of my projects!</p>
 
       <ul className="list-disc list-inside flex flex-col"> {/* Projects */}
-        <a href="/birthdays/">Birthdays</a>
-        <a href="https://calstateunderground.vercel.app">Cal State Underground</a>
-        <a href="https://github.com/maxas10/cv-tracker">Computer Vision Tracker (NEW)</a>
-        <a href="/stock/">Stock Trading Simulator</a>
+        <Link href="/birthdays/">Birthdays</Link>
+        <Link href="https://calstateunderground.vercel.app">Cal State Underground</Link>
+        <Link href="https://github.com/maxas10/cv-tracker">Computer Vision Tracker (NEW)</Link>
+        <Link href="/stock/">Stock Trading Simulator</Link>
       </ul>
 
       <br />
@@ -37,9 +38,9 @@ export default function Home() {
       <p>Contact me!</p>
 
       <ul className="list-disc list-inside flex flex-col"> {/* Socials */}
-        <a href="https://github.com/maxas10">Github</a>
-        <a href="https://www.linkedin.com/in/maxseung/">Linkedin</a>
-        <a href="/support/">Email</a>
+        <Link href="https://github.com/maxas10">Github</Link>
+        <Link href="https://www.linkedin.com/in/maxseung/">Linkedin</Link>
+        <Link href="/support/">Email</Link>
       </ul>
 
     </>
