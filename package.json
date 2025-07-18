@@ -12,6 +12,7 @@
     "@tsparticles/all": "^3.8.1",
     "@tsparticles/engine": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
+    "motion": "^12.23.6",
     "next": "15.4.1",
     "react": "19.1.0",
     "react-confetti": "^6.4.0",

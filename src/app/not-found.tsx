@@ -1,5 +1,7 @@
+import Title from "./components/title";
+
 export default function NotFound() {
     return <>
-        <h1>404 - Page Not Found</h1>
+        <Title page="404 - Page Not Found"></Title>
     </>
 }
