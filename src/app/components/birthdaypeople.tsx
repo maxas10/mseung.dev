@@ -1,6 +1,6 @@
 "use client";
 import * as birthdays from '../birthdays/birthdays.json'
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 
 interface BirthdayPeopleProps {
   onBirthdayDetected: (birthdayExists: boolean) => void;
@@ -86,7 +86,7 @@ export default function BirthdayPeople({ onBirthdayDetected }: BirthdayPeoplePro
                 <ul>
                     {birthdayPeople.map((person: SortedPerson) => {
                         return (
-                            <li key={person.data.name} className="w-1/3 flex justify-between">
+                            <li key={person.data.name} className="lg:w-1/3 md:w-1/2 flex justify-between">
                                 <p>{person.data.name}</p>
                                 <p>{months[Number(person.data.date.charAt(0) + person.data.date.charAt(1))-1]} {Number(person.data.date.charAt(2) + person.data.date.charAt(3))}</p>
                             </li>
@@ -98,7 +98,7 @@ export default function BirthdayPeople({ onBirthdayDetected }: BirthdayPeoplePro
             <div>
                 Upcoming Birthdays
                 <ul>{allPeople.map((person: SortedPerson) => {
-                    return <li key={person.data.name} className='flex-row w-1/3 flex justify-between'>
+                    return <li key={person.data.name} className='flex-row lg:w-1/3 md:w-1/2 sm: w-full flex justify-between'>
                         <p>{person.data.name}</p>
                         <p>{months[Number(person.data.date.charAt(0) + person.data.date.charAt(1))-1]} {Number(person.data.date.charAt(2) + person.data.date.charAt(3))}</p>
                     </li>

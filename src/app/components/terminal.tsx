@@ -2,7 +2,7 @@
 export default function Terminal({ children }: { children: React.ReactNode }) {
    return (
         <main className="flex h-screen w-screen justify-center items-center flex-col">
-          <div className="w-[1000px] h-[600px]
+          <div className="lg:w-[1000px] lg:h-[600px] md:w-[700px] md:h-[400px] sm:w-[600px] sm:h-[400px] w-screen h-screen
           bg-black
             rounded-md 
             shadow-2xl 
