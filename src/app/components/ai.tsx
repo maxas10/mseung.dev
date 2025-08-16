@@ -7,7 +7,9 @@ export default function Gemini() {
     const ai = new GoogleGenAI({ apiKey: process.env.NEXT_PUBLIC_API_KEY });
     const [prompt, setPrompt] = useState<string>("");
     const [response, setResponse] = useState<string>("");
+    const [responseFormatted, setResponseFormatted] = useState<Array<string>>([]);
     const [remember, setRemember] = useState<boolean>(true);
+    const [formatted, setFormatted] = useState<boolean>(true);
 
     const main = async () => {
         const geminiResponse = await ai.models.generateContent({
@@ -15,11 +17,12 @@ export default function Gemini() {
             contents: prompt,
         });
         setResponse(geminiResponse.text ?? "");
+        setResponseFormatted(geminiResponse.text?.replace(/\*\*/g, "").replace(/\#\#/g, "").replace(/\*\*/g, "").split(/(?=\d+\.)/) || []);
     };
 
     const handlePromptChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-        if(remember) {
-            setPrompt(prev => prev + " | " + e.target.value)
+        if(remember && prompt.length > 0) {
+            setPrompt(prev => prev + " " + e.target.value)
         } else {
             setPrompt(e.target.value);
         }
@@ -31,9 +34,19 @@ export default function Gemini() {
             <input type="checkbox" onChange={() => {setRemember(!remember)}} checked={remember}/>
             <p>Remember past prompts</p>
         </div>
+        <div className="flex gap-3">
+            <input type="checkbox" onChange={() => {setFormatted(!formatted)}} checked={formatted}/>
+            <p>Formatting (number list, no ##, no **)</p>
+        </div>
         <button onClick={() => { setResponse("Loading..."); main(); }} className="hover:text-gray-400 cursor-pointer">Send</button>
-        <br />
-        {response}
+        <div className="mt-5"></div>
+        <div className="flex flex-col gap-3">
+        {formatted ? responseFormatted.map((line, index) => (
+            <p key={index}>
+                {line}
+            </p>
+        )) : response}
+        </div>
     </div>
 
 }
