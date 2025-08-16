@@ -18,7 +18,8 @@ export default function Gemini() {
             contents: prompt,
         });
         setResponse(geminiResponse.text ?? "");
-        setResponseFormatted(geminiResponse.text?.replace(/\*\*/g, "").replace(/\#\#/g, "").replace(/\*\*/g, "").split(/(?=\d+\.)/) || []);
+        console.log(geminiResponse.text?.split(/(?=\d+\.)/))
+        setResponseFormatted(geminiResponse.text?.replace(/\*\*/g, "").replace(/\#\#/g, "").replace(/\*\*/g, "").split(/(?=\b\d+\.)/) || []);
     };
 
     const handlePromptChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
