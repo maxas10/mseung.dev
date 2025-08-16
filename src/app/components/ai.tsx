@@ -1,6 +1,7 @@
 "use client"
 import { GoogleGenAI } from "@google/genai";
 import "dotenv/config";
+import { s } from "motion/react-client";
 import { useState } from 'react';
 
 export default function Gemini() {
@@ -38,7 +39,7 @@ export default function Gemini() {
             <input type="checkbox" onChange={() => {setFormatted(!formatted)}} checked={formatted}/>
             <p>Formatting (number list, no ##, no **)</p>
         </div>
-        <button onClick={() => { setResponse("Loading..."); main(); }} className="hover:text-gray-400 cursor-pointer">Send</button>
+        <button onClick={() => { setResponse("Loading..."); setResponseFormatted(["Loading..."]); main(); }} className="hover:text-gray-400 cursor-pointer">Send</button>
         <div className="mt-5"></div>
         <div className="flex flex-col gap-3">
         {formatted ? responseFormatted.map((line, index) => (
