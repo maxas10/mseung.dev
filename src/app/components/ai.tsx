@@ -29,7 +29,7 @@ export default function Gemini() {
     };
 
     return <div>
-        <textarea name="form" className="w-full bg-white text-black border-2 placeholder:text-gray-400" onInput={(e) => handlePromptChange(e as any)} placeholder="Prompt" ></textarea>
+        <textarea name="form" className="w-full bg-white text-black border-2 placeholder:text-gray-400" onInput={(e) => handlePromptChange(e as React.ChangeEvent<HTMLTextAreaElement>)} placeholder="Prompt" ></textarea>
         <div className="flex gap-3">
             <input type="checkbox" onChange={() => {setRemember(!remember)}} checked={remember}/>
             <p>Remember past prompts</p>
