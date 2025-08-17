@@ -1,7 +1,6 @@
 "use client"
 import { GoogleGenAI } from "@google/genai";
 import "dotenv/config";
-import { s } from "motion/react-client";
 import { useState } from 'react';
 
 export default function Gemini() {
