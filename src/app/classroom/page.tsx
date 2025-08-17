@@ -49,7 +49,7 @@ const dummyClasses: ClassCard[] = [
     teacher: 'Victoria Hayes (DH)',
     bgColor: 'https://www.gstatic.com/classroom/themes/img_learnlanguage.jpg',
     teacherAvatarUrl: 'https://i.pinimg.com/1200x/a3/e5/2b/a3e52bf536eef4d9a85bdc0df555c8b3.jpg',
-    studentAvatarUrl: 'https://placehold.co/100x100/4299E1/ffffff?text=C',
+    studentAvatarUrl: '',
     cardContent: {
     },
   },
@@ -60,7 +60,7 @@ const dummyClasses: ClassCard[] = [
     teacher: 'Michael Carter (DH)',
     bgColor: 'https://gstatic.com/classroom/themes/Math.jpg',
     teacherAvatarUrl: 'https://i.pinimg.com/736x/34/a3/9a/34a39a17e41ea563574f3bfcd79b83ac.jpg',
-    studentAvatarUrl: 'https://placehold.co/100x100/E53E3E/ffffff?text=E',
+    studentAvatarUrl: '',
     cardContent: {
       line1: 'Due Thursday',
       line2: 'Great Gatsby Fishbowl',
@@ -73,7 +73,7 @@ const dummyClasses: ClassCard[] = [
     teacher: 'Daniel Brooks (DH)',
     bgColor: 'https://gstatic.com/classroom/themes/Physics.jpg',
     teacherAvatarUrl: 'https://i.pinimg.com/736x/93/84/c4/9384c48f68b75163e832b2481d0c9b76.jpg',
-    studentAvatarUrl: 'https://placehold.co/100x100/A0AEC0/ffffff?text=W',
+    studentAvatarUrl: '',
     cardContent: {
 
     },
