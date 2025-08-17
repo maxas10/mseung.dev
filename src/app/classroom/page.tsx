@@ -18,9 +18,9 @@ import {
   UserCircle as UserCircleIcon,
   ChevronDown as ChevronDownIcon,
 } from 'lucide-react';
-import Gemini from '../main/components/ai';
-import Terminal from '../main/components/terminal';
-import Title from '../main/components/title';
+import Gemini from '../components/ai';
+import Terminal from '../components/terminal';
+import Title from '../components/title';
 
 // Define the shape of a class card
 interface ClassCard {
@@ -307,14 +307,12 @@ export default function App() {
   }, [])
 
   return (
-    <div>
-      <div style={{ display: toggled ? "flex" : "none" }}>
-        <Terminal>
-          <Title page="Gemini 2.5 Flash Wrapper"></Title>
+    <>
+      <div style={{ display: toggled ? "flex" : "none" }} className="flex-col">
+        <Title page="Gemini 2.5 Flash Wrapper"></Title>
         <Gemini></Gemini>
-        </Terminal>
       </div>
-      <div className="flex flex-col h-screen font-sans bg-[#f8fafd]" style={{ display: toggled ? "none" : "flex" }}>
+      <div className="flex flex-col h-screen font-sans bg-[#f8fafd] absolute top-0 left-0 w-screen" style={{ display: toggled ? "none" : "flex" }}>
         {/* Top Navbar */}
         <nav className="flex items-center justify-between px-6 py-3 ">
           <div className="flex items-center">
@@ -365,6 +363,6 @@ export default function App() {
           <MainContent />
         </div>
       </div>
-    </div>
+    </>
   );
 }
