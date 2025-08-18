@@ -44,8 +44,8 @@ export default function Page() {
                 <div key={index}>
                     <p>Title: {item.title}</p>
                     <p>Class Size: {item.classSize}</p>
-                    <p>Teacher First Name: {item.teacherFirstName}</p>
-                    <p>Teacher Last Name: {item.teacherLastName}</p>
+                    {(item.teacherFirstName) && <p>Teacher First Name: {item.teacherFirstName}</p>}
+                    {(item.teacherLastName) && <p>Teacher Last Name: {item.teacherLastName}</p>}
                 </div>)
         })}
         </div>
