@@ -3,6 +3,7 @@ import { GoogleGenAI } from "@google/genai";
 import "dotenv/config";
 import { useState } from 'react';
 
+
 export default function Gemini() {
     const ai = new GoogleGenAI({ apiKey: process.env.NEXT_PUBLIC_API_KEY });
     const [prompt, setPrompt] = useState<string>("");

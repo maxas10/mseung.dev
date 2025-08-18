@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import {
   Home as HomeIcon,
   Calendar as CalendarIcon,
@@ -19,7 +19,6 @@ import {
   ChevronDown as ChevronDownIcon,
 } from 'lucide-react';
 import Gemini from '../components/ai';
-import Terminal from '../components/terminal';
 import Title from '../components/title';
 
 // Define the shape of a class card
@@ -201,9 +200,9 @@ const Sidebar = () => {
 const MainContent = () => {
   return (
     <div className="flex-grow p-6 overflow-y-auto bg-white rounded-4xl">
-      <div className="grid gap-5"         style={{
-          gridTemplateColumns: "repeat(auto-fit, minmax(0, 300px))",
-        }}>
+      <div className="grid gap-5" style={{
+        gridTemplateColumns: "repeat(auto-fit, minmax(0, 300px))",
+      }}>
         {dummyClasses.map((cls) => (
           <div
             key={cls.id}
@@ -288,7 +287,7 @@ export default function App() {
   const [toggled, setToggled] = useState<boolean>(false);
 
   const handleKeyPress = (e: KeyboardEvent) => {
-    if (e.key.toLowerCase() === "p") {
+    if (e.key.toLowerCase() === "`") {
       setToggled(prev => !prev)
     }
   }
