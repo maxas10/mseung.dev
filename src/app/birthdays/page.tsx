@@ -15,8 +15,9 @@ export default function Page() {
 
     return <>
         <Title page="Birthdays"></Title>
-        <CustomDate/>
+        <p>Removed for privacy.</p>
+        {/* <CustomDate/>
         <BirthdayPeople onBirthdayDetected={handleBirthdayDetected}/>
-        {hasBirthday && <Confetti />}
+        {hasBirthday && <Confetti />} */}
     </>
 }
