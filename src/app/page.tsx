@@ -27,12 +27,12 @@ export default function Home() {
       <p>Check out some of my projects!</p>
 
       <ul className="list-disc list-inside flex flex-col"> {/* Projects */}
+        <Link href="/blog/">Blog/Journals</Link>
         <Link href="/cardgame/">Card Memorization Data Collection (SCHOOL PROJECT)</Link>
         <Link href="/classroom/">Classroom</Link>
-        <Link href="https://github.com/maxas10/cv-tracker">Computer Vision Tracker</Link>
-        <Link href="/birthdays/">Birthdays</Link>
+        {/* <Link href="https://github.com/maxas10/cv-tracker">Computer Vision Tracker</Link> */}
         <Link href="https://calstateunderground.vercel.app">Cal State Underground</Link>
-        <Link href="/stock/">Stock Trading Simulator</Link>
+        {/* <Link href="/stock/">Stock Trading Simulator</Link> */}
       </ul>
 
       <br />
