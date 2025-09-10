@@ -6,10 +6,14 @@ export default function Page() {
 
     return <div>
         <Title page="Blog"></Title>
-        <h1>Journals</h1>
+        <h1>Personal</h1>
         <ul className="list-disc list-inside flex flex-col">
-            <Link href="/journals/090925">090925 #1: Reading a book</Link>
-            
+            <Link href="/blog/090925">090925 #1: Reading a book</Link>
+        </ul>
+        <br />
+        <h1>Public</h1>
+        <ul className="list-disc list-inside flex flex-col">
+            <p>None yet.</p>
         </ul>
     </div>
 
