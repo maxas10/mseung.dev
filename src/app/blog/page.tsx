@@ -13,7 +13,7 @@ export default function Page() {
         <br />
         <h1>Public</h1>
         <ul className="list-disc list-inside flex flex-col">
-            <p>None yet.</p>
+            <Link href="/blog/091025">091025 #2: Charlie Kirk</Link>
         </ul>
     </div>
 
