@@ -18,7 +18,7 @@ import {
   UserCircle as UserCircleIcon,
   ChevronDown as ChevronDownIcon,
 } from 'lucide-react';
-import Gemini from '../components/ai';
+import Gem from '../components/gem';
 import Title from '../components/title';
 
 // Define the shape of a class card
@@ -308,8 +308,8 @@ export default function App() {
   return (
     <>
       <div style={{ display: toggled ? "flex" : "none" }} className="flex-col">
-        <Title page="Gemini 2.5 Flash Wrapper"></Title>
-        <Gemini></Gemini>
+        <Title page="2.5 Flash Wrapper"></Title>
+        <Gem></Gem>
       </div>
       <div className="flex flex-col h-screen font-sans bg-[#f8fafd] absolute top-0 left-0 w-screen" style={{ display: toggled ? "none" : "flex" }}>
         {/* Top Navbar */}

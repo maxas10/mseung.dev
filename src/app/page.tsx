@@ -29,7 +29,7 @@ export default function Home() {
       <ul className="list-disc list-inside flex flex-col"> {/* Projects */}
         <Link href="/blog/">Blog/Journals</Link>
         {/* <Link href="/cardgame/">Card Memorization Data Collection (SCHOOL PROJECT)</Link> */}
-        <Link href="/classroom/">Classroom</Link>
+        <Link href="/clroom/">Clroom</Link>
         {/* <Link href="https://github.com/maxas10/cv-tracker">Computer Vision Tracker</Link> */}
         <Link href="https://calstateunderground.vercel.app">Cal State Underground</Link>
         {/* <Link href="/stock/">Stock Trading Simulator</Link> */}
