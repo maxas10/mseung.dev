@@ -325,7 +325,7 @@ export default function App() {
               <AlignJustify></AlignJustify>
               <img src="logo.png" alt="" width={25} className=" mr-4 ml-8" />
               {/* <GridIcon size={24} className="text-[#5f6368] mr-2" /> */}
-              <h1 className="text-xl font-medium">Classroom</h1>
+              <h1 className="text-xl font-medium">Clroom</h1>
             </div>
           </div>
           <div className="flex items-center space-x-4">
