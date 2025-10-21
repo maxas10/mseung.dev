@@ -3,6 +3,6 @@ import Title from "../components/title"
 export default function Page() {
     return <>
         <Title page="Privacy"></Title>
-        <h1>We do not collect any data from you.</h1>
+        <h1>Max's Calculator does not collect any data from you.</h1>
     </>
 }
