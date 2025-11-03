@@ -16,7 +16,7 @@ export default function Page() {
             <Link href="/blog/091025">091025 #2: Charlie Kirk</Link>
         </ul> */}
       <ul className="list-disc list-inside flex flex-col">
-        <Link href="/blog/110225">November 2, 2025 #3: My experience with Google's new age requirements</Link>
+        <Link href="/blog/110325">Pi Hotspot: A Comprehensive Guide</Link>
       </ul>
     </div>
   );
