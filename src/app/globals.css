@@ -23,24 +23,28 @@
   font-family: "Cascadia Mono";
   src: url("/Cascadia_Mono/static/CascadiaMono-Regular.ttf") format("truetype");
 }
-
+/* 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Cascadia Mono;
-}
+} */
 
-ul > * {
+/* ul > * {
   text-indent: 2rem;
+} */
+
+a,button {
+  color: black;
+  text-decoration: underline;
+  width: fit-content;
 }
 
-a {
-  color: turquoise;
+a:hover,button:hover {
+  color: teal;
+  cursor: pointer;
 }
 
-a:hover {
-  color: white;
-}
 
 @media screen and (max-width: 600px) {
   
