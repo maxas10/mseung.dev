@@ -9,6 +9,7 @@ export default function Home() {
       <div className="flex flex-col">
         <Link href="https://github.com/maxas10">Github</Link>
         <Link href="https://www.linkedin.com/in/maxseung/">Linkedin</Link>
+        <Link href="https://bsky.app/profile/mseung.bsky.social">Bluesky</Link>
         <Link href="/support/">Email</Link>
 
 
