@@ -34,6 +34,7 @@ export default function Home() {
         <p>I made this for my AP Computer Science class because they didn&apos;t have one. Features easy to read steps.</p>
         <Link href="https://calstateunderground.vercel.app">Cal State Underground</Link>
         <p>Rock band portfolio with cloud-hosted database and RESTful API integration to organize and manage user inquiries using NextJS.</p>
+        <Link href="/extension"></Link>
       </div><br />
       <div>
         <p>I went to the Berkeley Math Tournament in 2025. Don't worry about what I won.</p>
