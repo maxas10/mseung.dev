@@ -32,12 +32,14 @@ export default function Home() {
       <div className="flex flex-col">
         <Link href="/turing">Turing Machine Compiler</Link>
         <p>I made this for my AP Computer Science class because they didn&apos;t have one. Features easy to read steps.</p>
-        <Link href="https://calstateunderground.vercel.app">Cal State Underground</Link>
+        <Link href="https://calstateunderground.vercel.app">Caliground</Link>
         <p>Rock band portfolio with cloud-hosted database and RESTful API integration to organize and manage user inquiries using NextJS.</p>
-        <Link href="/extension"></Link>
+        <Link href="/failures">Museum of Failures</Link>
+        <p>A collection of my failures.</p>
+
       </div><br />
       <div>
-        <p>I went to the Berkeley Math Tournament in 2025. Don't worry about what I won.</p>
+        <sub>May 2026</sub>
         </div> {/*About */}
       {/* <h2>Blogs</h2>
       <Link href="/111025">November 10, 2025: Securly</Link> */}
