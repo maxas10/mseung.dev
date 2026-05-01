@@ -32,7 +32,7 @@ export default function Emojis() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            createEmoji("/floatingemojis/fourleaf.png")
+            createEmoji("/floatingemojis/flower.png")
         }, 300);
         return () => clearInterval(interval);
     }, []);
