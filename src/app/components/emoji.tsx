@@ -11,7 +11,8 @@ type EmojiProps = {
 }
 
 export default function Emoji(props: EmojiProps) {
-    const [position, setPosition] = useState({x: -50, y: -50});
+    const size = 100;
+    const [position, setPosition] = useState({x: -size, y: -size});
 
     const move = () => {
         setPosition(prev => ({x: prev.x+props.velX, y: prev.y+props.velY}));
@@ -26,7 +27,7 @@ export default function Emoji(props: EmojiProps) {
         if (position.x > window.innerWidth || position.y > window.innerHeight) props.handleDelete();
     }, [position])
 
-    return <Image src={props.imageURL} alt="emoji" width={100} height={100} 
+    return <Image src={props.imageURL} alt="emoji" width={size} height={size} 
         style={{position: "absolute", left: position.x, top: position.y}}
     ></Image>
 

@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: white;
-  --foreground: white;
+  --background: #ededed;
+  --foreground: #0a0a0a;
+  --terminal-background: oklch(96.6% 0.005 106.5);
+  --a-hover: oklch(58% 0.031 107.3);
 }
 
 @theme inline {
@@ -15,7 +17,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: oklch(88% 0.011 106.6);
+    --terminal-background: oklch(39.4% 0.023 107.4);
+    --a-hover: oklch(96.6% 0.005 106.5);
   }
 }
 
@@ -25,8 +29,8 @@
 }
 
 body {
-  background: var(--foreground);
-  color: var(--background);
+  background: var(--background);
+  color: var(--foreground);
   font-family: Cascadia Mono;
   margin: 0;
 }
@@ -41,8 +45,12 @@ a,button {
 }
 
 a:hover,button:hover {
-  color: teal;
+  color: var(--a-hover);
   cursor: pointer;
+}
+
+.terminal {
+  background: var(--terminal-background);
 }
 
 
