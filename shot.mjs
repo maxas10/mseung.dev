@@ -1,0 +1,12 @@
+import { chromium } from 'playwright-core';
+const exe = '/home/codespace/.cache/ms-playwright/chromium_headless_shell-1223/chrome-linux/headless_shell';
+const b = await chromium.launch({ executablePath: exe });
+const p = await b.newPage({ viewport: { width: 1600, height: 900 } });
+await p.goto('http://localhost:3000', { waitUntil: 'networkidle' });
+await p.waitForTimeout(1200);
+await p.screenshot({ path: '/tmp/home.png' });
+await p.goto('http://localhost:3000/failures', { waitUntil: 'networkidle' });
+await p.waitForTimeout(800);
+await p.screenshot({ path: '/tmp/failures.png' });
+await b.close();
+console.log('done');
