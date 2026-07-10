@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Template from "./components/template";
 import Terminal from "./components/terminal";
-import Emojis from "./components/emojis";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,9 +30,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ml-1 h-screen flex justify-center items-center overflow-x-hidden`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex justify-center items-center overflow-x-hidden`}
       >
-        <Emojis></Emojis>
         <Template><Terminal>{children}</Terminal></Template>
       </body>
     </html>
