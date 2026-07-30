@@ -20,7 +20,8 @@ export default function Emoji(props: EmojiProps) {
 
 
     useEffect(()=> {
-        setInterval(move, 10);
+        const interval = setInterval(move, 10);
+        return () => clearInterval(interval);
     },[])
 
     useEffect(() => {

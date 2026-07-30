@@ -31,14 +31,37 @@ export default function Emojis() {
     };
 
     useEffect(() => {
-        const interval = setInterval(() => {
-            createEmoji("/floatingemojis/flower.png")
-        }, 300);
-        return () => clearInterval(interval);
+        let interval: ReturnType<typeof setInterval> | undefined;
+
+        const startSpawning = () => {
+            if (interval !== undefined) return;
+            interval = setInterval(() => {
+                createEmoji("/floatingemojis/flower.png")
+            }, 300);
+        };
+
+        const stopSpawning = () => {
+            if (interval === undefined) return;
+            clearInterval(interval);
+            interval = undefined;
+        };
+
+        const handleVisibility = () => {
+            if (document.hidden) stopSpawning();
+            else startSpawning();
+        };
+
+        handleVisibility();
+        document.addEventListener("visibilitychange", handleVisibility);
+
+        return () => {
+            stopSpawning();
+            document.removeEventListener("visibilitychange", handleVisibility);
+        };
     }, []);
 
 
-    return <div className="w-screen h-screen absolute overflow-hidden -z-10 blur-[3px]">
+    return <div className="w-screen h-screen absolute overflow-hidden -z-10 blur-[20px]">
         {emojis.map(item =>
             <Emoji
                 key={item.id}
