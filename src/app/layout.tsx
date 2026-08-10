@@ -33,7 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased ml-1 h-screen flex overflow-x-hidden justify-center-safe items-center-safe overflow-y-auto p-8`}
       >
-        <Emojis></Emojis>
+        {/* <Emojis></Emojis> */}
         <Template>{children}</Template>
       </body>
     </html>
