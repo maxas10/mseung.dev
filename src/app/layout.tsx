@@ -31,7 +31,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased ml-1 h-screen flex overflow-x-hidden justify-center-safe items-center-safe overflow-y-auto p-8`}
+        className="p-4"
+        // className={`${geistSans.variable} ${geistMono.variable} antialiased ml-1 h-screen flex overflow-x-hidden justify-center-safe items-center-safe overflow-y-auto p-8`}
       >
         {/* <Emojis></Emojis> */}
         <Template>{children}</Template>
